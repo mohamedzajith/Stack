@@ -39,6 +39,12 @@ public class TheStack {
         }
     }
 
+    public void pushMeny(String multipleValue){
+        String[] tempValue = multipleValue.split(",");
+        for (int i = 0; i < tempValue.length; i++) {
+            push(tempValue[i]);
+        }
+    }
     public int pop(){
         if (IsEmpty()){
             System.out.println("Stack is Empty !! ");
@@ -77,7 +83,7 @@ public class TheStack {
         TheStack st = new TheStack();
         st.push("mohaned");
         st.push("nusra");
-        st.push("nasrin");
+        st.pushMeny("nasrin,siraj,nimishan,miller");
         st.DisplayTheStack();
     }
 }
